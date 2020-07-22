@@ -3,7 +3,7 @@ import os
 import math
 import librosa
 
-DATASET_PATH = "D:\Gitika\project\genres_dataset\Genres"
+DATASET_PATH = "" #Path to raw data
 JSON_PATH = "data.json"
 SAMPLE_RATE = 22050
 TRACK_DURATION = 30 # in seconds
