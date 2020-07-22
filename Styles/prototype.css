@@ -2,7 +2,7 @@ body {
 /*background: #d9a7c7; 
 background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  
 background: linear-gradient(to right, #fffcdc, #d9a7c7);*/ 
-background: url(images/girl.png) no-repeat center center fixed ; 
+background: url(girl.png) no-repeat center center fixed ; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
