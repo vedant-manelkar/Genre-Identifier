@@ -88,9 +88,9 @@ def to_melspectrogram(songs, n_fft=1024, hop_length=256):
     return np.array(list(tsongs))
 
 
-def make_dataset_dl(args):
+def make_dataset_dl(song):
     # Convert to spectrograms and split into small windows
-    signal, sr = librosa.load(args.song, sr=None)
+    signal, sr = librosa.load(song, sr=None)
 
     # Convert to dataset of spectograms/melspectograms
     signals = splitsongs(signal)
