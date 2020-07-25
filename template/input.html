@@ -19,12 +19,12 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center"><i class="fa fa-upload"></i> Upload the audio file.</h5>
-            <form class="form-signin">
+            <form class="form-signin"  method="POST" enctype="multipart/form-data">
               <hr class="my-4">
-             <input type="file" id="mp3,mpeg" name="mp3" accept="audio/*" class="file">
+             <input type="file" id="audio" name="audio" class="file">
                 <input type="submit" class="submit">
               <hr class="my-4">
-              <div class="result" style="text-align: center; font-size: 50px;"></div>
+              <div class="result" style="text-align:center; font-size: 50px;">Genre: {{ genre }}</div>
             </form>
           </div>
         </div>
@@ -33,7 +33,7 @@
   </div>
 <footer class="footer">
   <div class="container">
-    <span class="text-muted">2020 © <a href="prototype.html" style="color: black;">IL DS PROJECT GROUP</a></span>
+    <span class="text-muted">2020 © <a href="{{url_for('about')}}" style="color: black;">IL DS PROJECT GROUP</a></span>
   </div>
 </footer>
 </body>
