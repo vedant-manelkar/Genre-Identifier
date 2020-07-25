@@ -1,6 +1,7 @@
 from flask import Flask,render_template,url_for,request,redirect
 from werkzeug.utils import secure_filename
 import os
+from app import *
 app=Flask(__name__,template_folder='template')
 
 @app.route('/')
@@ -20,10 +21,10 @@ def upload_audio():
 
             audio = request.files["audio"]
 
-            audio.save('static/audio.mp3')
+            audio.save('data/audio.mp3')
 
             #call your functio below and pass the same path as above static/audio.mp3
-            genre = "Pop"
+            genre = main('data/audio.mp3')
     return render_template('input.html', genre = genre)
 
 
