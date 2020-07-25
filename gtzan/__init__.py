@@ -17,17 +17,18 @@ class AppManager:
     def run(self):
         
         X = make_dataset_dl(self.song)
-        model = load_model("..\model\custom_cnn_2d.h5")
+        model = load_model("model/custom_cnn_2d.h5")
         preds = model.predict(X)
         votes = majority_voting(preds, self.genres)
         genre1=votes[0][0]
         prob1=votes[0][1]*100
-        genre2=votes[1][0]
-        prob2=votes[1][1]*100
-        genre3=votes[2][0]
-        prob3=votes[2][1]*100
+        #genre2=votes[1][0]
+        #prob2=votes[1][1]*100
+        #genre3=votes[2][0]
+        #prob3=votes[2][1]*100
 
-        listt = [genre1,prob1,genre2,prob2,genre3,prob3]
+        listt = [genre1,prob1]
+        #listt = [genre1,prob1,genre2,prob2,genre3,prob3]
         
         return listt
         
