@@ -20,7 +20,7 @@ def upload_audio():
         if request.files:
 
             audio = request.files["audio"]
-
+            print(audio.filename, flush=True)
             audio.save('data/audio.mp3')
 
             #call your functio below and pass the same path as above static/audio.mp3

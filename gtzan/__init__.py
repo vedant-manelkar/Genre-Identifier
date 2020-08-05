@@ -20,15 +20,19 @@ class AppManager:
         model = load_model("model/custom_cnn_2d.h5")
         preds = model.predict(X)
         votes = majority_voting(preds, self.genres)
-        genre1=votes[0][0]
-        prob1=votes[0][1]*100
-        #genre2=votes[1][0]
-        #prob2=votes[1][1]*100
-        #genre3=votes[2][0]
-        #prob3=votes[2][1]*100
+        genre1 = votes[0][0]
+        p1 = votes[0][1]*100
+        p2="%"
+        global prob1
+        prob1 = str(p1) + p2
+        
+        # for top 3 genres:
+        # genre2=votes[1][0]
+        # prob2=votes[1][1]*100
+        # genre3=votes[2][0]
+        # prob3=votes[2][1]*100
 
-        listt = [genre1,prob1]
-        #listt = [genre1,prob1,genre2,prob2,genre3,prob3]
+        return genre1
         
-        return listt
-        
+    def prob(self):
+        return prob1
