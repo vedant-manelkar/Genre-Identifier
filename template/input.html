@@ -24,16 +24,16 @@
              <input type="file" id="audio" name="audio" class="file">
                 <input type="submit" class="submit">
               <hr class="my-4">
-              <div class="result" style="text-align:center; font-size: 35px;">Genre: {{ genre }} Probability: {{ prob1 }}</div>
+              <div class="result" style="text-align:center; font-size: 23px;"> <strong>Name: </strong> {{ name }}  <br> <strong> Genre: </strong> {{ genre }}  <br> <strong> Probability: </strong> {{ prob1 }} </div>
             </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-<footer class="footer">
+<footer class="footer" >
   <div class="container">
-    <span class="text-muted">2020 © <a href="{{url_for('about')}}" style="color: black;">IL DS PROJECT GROUP</a></span>
+    <span class="text-muted" style="margin-top: 30px" >2020 © <a href="{{url_for('about')}}" style="color: black;">IL DS PROJECT GROUP</a></span>
   </div>
 </footer>
 </body>

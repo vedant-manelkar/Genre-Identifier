@@ -22,17 +22,18 @@ def about():
 def upload_audio():
     genre = ""
     prob1 = ""
+    name=""
     if request.method == "POST":
         if request.files:
 
             audio = request.files["audio"]
-            print(audio.filename, flush=True)
+            name = audio.filename
             audio.save('data/audio.mp3')
 
             #call your function below and pass the same path as above static/audio.mp3
             genre = main('data/audio.mp3')
             prob1 =probability('data/audio.mp3')
-    return render_template('input.html', genre = genre , prob1 = prob1)
+    return render_template('input.html', genre = genre , prob1 = prob1, name=name)
 
 
 if __name__=='__main__':
