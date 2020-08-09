@@ -1,7 +1,12 @@
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 from flask import Flask,render_template,url_for,request,redirect
 from werkzeug.utils import secure_filename
+import tensorflow
 import os
 from app import *
+
 app=Flask(__name__,template_folder='template')
 
 @app.route('/')
@@ -16,6 +21,7 @@ def about():
 @app.route('/',methods = ['GET', 'POST'])
 def upload_audio():
     genre = ""
+    prob1 = ""
     if request.method == "POST":
         if request.files:
 
@@ -23,10 +29,13 @@ def upload_audio():
             print(audio.filename, flush=True)
             audio.save('data/audio.mp3')
 
-            #call your functio below and pass the same path as above static/audio.mp3
+            #call your function below and pass the same path as above static/audio.mp3
             genre = main('data/audio.mp3')
-    return render_template('input.html', genre = genre)
+            prob1 =probability('data/audio.mp3')
+    return render_template('input.html', genre = genre , prob1 = prob1)
 
 
 if __name__=='__main__':
 	app.run(debug=True)
+
+
