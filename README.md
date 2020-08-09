@@ -1,2 +1,7 @@
-# Genre-Identifier
-This website will allow you to identify the genre of the audio file you upload.
+# Song Genre Classifier
+This website will identify the genre of the song you upload.
+
+## Team Members:
+* Gitika Jha
+* Manashree Jhawar
+* Vedant Manelkar
