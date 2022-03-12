@@ -17,7 +17,7 @@ MarkupSafe==1.1.1
 matplotlib==3.3.0
 Naked==0.1.31
 pandas==1.0.3
-Pillow==7.2.0
+Pillow==9.0.1
 psutil==5.7.2
 Pygments==2.6.1
 requests==2.24.0
